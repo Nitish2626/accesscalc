@@ -1,0 +1,33 @@
+#home-text{
+    font-size: 20px;
+    color:white;
+    margin: 0% 0% 0% 5%;
+}
+
+@media only screen and (min-width:340px){
+
+    #home-text{
+        margin: 4% 0% 2% 5%;
+    }
+}
+
+@media only screen and (min-width:500px){
+
+    #home-text{
+        margin: 2% 0% 2% 5%;
+    }
+}
+
+@media only screen and (min-width:769px){
+
+    #home-text{
+        margin: 1% 0% 2% 5%;
+    }
+}
+
+@media only screen and (min-width:1200px){
+
+    #home-text{
+        margin: 1% 0% 2% 5%;
+    }
+}
