@@ -70,9 +70,49 @@ const Number = (props) => {
     const bin_to_bdoh=(n)=>{
         let bin=[];
         let pow=[];
-        let dec=0;
+        let dec=" ";
+        let v=[];
         for(let i=0;i<ivalue.length;i++){
-            bin[i]=ivalue[i];
+            if(ivalue[i]=="A"){
+                // bin[i]=ivalue[i].replace("A","10");
+                v[i]=ivalue[i].replace("A",10);
+                bin[i]=v[i];
+                console.log("After replace",bin[i]);
+            }
+            if(ivalue[i]=="B"){
+                // bin[i]=ivalue[i].replace("B","11");
+                v[i]=ivalue[i].replace("B",11);
+                bin[i]=v[i];
+                console.log("After replace",bin[i]);
+            }
+            if(ivalue[i]=="C"){
+                // bin[i]=ivalue[i].replace("C","12");
+                v[i]=ivalue[i].replace("C",12);
+                bin[i]=v[i];
+                console.log("After replace",bin[i]);
+            }
+            if(ivalue[i]=="D"){
+                // bin[i]=ivalue[i].replace("D","13");
+                v[i]=ivalue[i].replace("D",13);
+                bin[i]=v[i];
+                console.log("After replace",bin[i]);
+            }
+            if(ivalue[i]=="E"){
+                // bin[i]=ivalue[i].replace("E","14");
+                v[i]=ivalue[i].replace("E",14);
+                bin[i]=v[i];
+                console.log("After replace",bin[i]);
+            }
+            if(ivalue[i]=="F"){
+                // bin[i]=ivalue[i].replace("F","15");
+                v[i]=ivalue[i].replace("F",15);
+                bin[i]=v[i];
+                console.log("After replace",bin[i]);
+            }
+            else{
+                bin[i]=ivalue[i];
+                console.log("Final",bin[i]);
+            }
         }
         for(let j=bin.length-1;j>0;j--){
             pow.push(Math.pow(n,j));
@@ -80,6 +120,7 @@ const Number = (props) => {
         pow.push(1);
         for(let k=0;k<bin.length;k++){
             dec+=bin[k]*pow[k];
+            console.log("mul",dec);
         }
         let d=dec.toString();
         return d;
@@ -113,6 +154,24 @@ const Number = (props) => {
         else if(svalue=="Decimal" && s2value=="Hexadecimal"){
             setIvalue2(dec_to_bdoh(ivalue,16).replaceAll(",",""));
         }
+
+        else if(svalue=="Octal" && s2value=="Binary"){
+            setIvalue2(dec_to_bdoh(bin_to_bdoh(8),2).replaceAll(",",""));
+        }
+        else if(svalue=="Octal" && s2value=="Decimal"){
+            setIvalue2(bin_to_bdoh(8).replaceAll(",",""));
+        }
+        else if(svalue=="Octal" && s2value=="Octal"){
+            setErr(true);
+            setIvalue2(" ");
+        }
+        else if(svalue=="Octal" && s2value=="Hexadecimal"){
+            setIvalue2(dec_to_bdoh(bin_to_bdoh(8),16).replaceAll(",",""));
+        }
+
+        else if(svalue=="Hexadecimal" && s2value=="Binary"){
+            setIvalue2(dec_to_bdoh(bin_to_bdoh(16),2).replaceAll(",",""));
+        }
     }
 
     return (
@@ -131,7 +190,7 @@ const Number = (props) => {
                 </select>
 
                 <label className="label">{svalue} Number</label>
-                <input type="number" className="in-field" onChange={changeIvalue}></input>
+                <input type="text" className="in-field" onChange={changeIvalue}></input>
 
                 <span>To</span>
 
