@@ -70,48 +70,28 @@ const Number = (props) => {
     const bin_to_bdoh=(n)=>{
         let bin=[];
         let pow=[];
-        let dec=" ";
-        let v=[];
+        let dec=0;
         for(let i=0;i<ivalue.length;i++){
             if(ivalue[i]=="A"){
-                // bin[i]=ivalue[i].replace("A","10");
-                v[i]=ivalue[i].replace("A",10);
-                bin[i]=v[i];
-                console.log("After replace",bin[i]);
+                bin[i]=ivalue[i].replaceAll("A",10);
             }
-            if(ivalue[i]=="B"){
-                // bin[i]=ivalue[i].replace("B","11");
-                v[i]=ivalue[i].replace("B",11);
-                bin[i]=v[i];
-                console.log("After replace",bin[i]);
+            else if(ivalue[i]=="B"){
+                bin[i]=ivalue[i].replaceAll("B",11);
             }
-            if(ivalue[i]=="C"){
-                // bin[i]=ivalue[i].replace("C","12");
-                v[i]=ivalue[i].replace("C",12);
-                bin[i]=v[i];
-                console.log("After replace",bin[i]);
+            else if(ivalue[i]=="C"){
+                bin[i]=ivalue[i].replaceAll("C",12);
             }
-            if(ivalue[i]=="D"){
-                // bin[i]=ivalue[i].replace("D","13");
-                v[i]=ivalue[i].replace("D",13);
-                bin[i]=v[i];
-                console.log("After replace",bin[i]);
+            else if(ivalue[i]=="D"){
+                bin[i]=ivalue[i].replaceAll("D",13);
             }
-            if(ivalue[i]=="E"){
-                // bin[i]=ivalue[i].replace("E","14");
-                v[i]=ivalue[i].replace("E",14);
-                bin[i]=v[i];
-                console.log("After replace",bin[i]);
+            else if(ivalue[i]=="E"){
+                bin[i]=ivalue[i].replaceAll("E",14);
             }
-            if(ivalue[i]=="F"){
-                // bin[i]=ivalue[i].replace("F","15");
-                v[i]=ivalue[i].replace("F",15);
-                bin[i]=v[i];
-                console.log("After replace",bin[i]);
+            else if(ivalue[i]=="F"){
+                bin[i]=ivalue[i].replaceAll("F",15);
             }
             else{
                 bin[i]=ivalue[i];
-                console.log("Final",bin[i]);
             }
         }
         for(let j=bin.length-1;j>0;j--){
@@ -120,7 +100,6 @@ const Number = (props) => {
         pow.push(1);
         for(let k=0;k<bin.length;k++){
             dec+=bin[k]*pow[k];
-            console.log("mul",dec);
         }
         let d=dec.toString();
         return d;
@@ -171,6 +150,16 @@ const Number = (props) => {
 
         else if(svalue=="Hexadecimal" && s2value=="Binary"){
             setIvalue2(dec_to_bdoh(bin_to_bdoh(16),2).replaceAll(",",""));
+        }
+        else if(svalue=="Hexadecimal" && s2value=="Decimal"){
+            setIvalue2(bin_to_bdoh(16).replaceAll(",",""));
+        }
+        else if(svalue=="Hexadecimal" && s2value=="Octal"){
+            setIvalue2(dec_to_bdoh(bin_to_bdoh(16),8).replaceAll(",",""));
+        }
+        else if(svalue=="Hexadecimal" && s2value=="Hexadecimal"){
+            setErr(true);
+            setIvalue2(" ");
         }
     }
 
