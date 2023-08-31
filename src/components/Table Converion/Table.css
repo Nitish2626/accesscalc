@@ -1,0 +1,8 @@
+#tab-con{
+    background-color: rgb(39, 117, 148);
+}
+#table,th,td{
+    color:white;
+    border:2px solid white;
+    border-collapse: collapse;
+}

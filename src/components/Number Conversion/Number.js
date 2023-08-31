@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Number.css";
 import Error from "../Error/Error";
+import Table from "../Table Converion/Table";
 
 const Number = (props) => {
 
@@ -195,6 +196,7 @@ const Number = (props) => {
 
                 <button id="con-btn" onClick={convert}>Convert</button>
             </div>
+            <Table />
             {error && <Error value={close} />}
         </div>
     );
