@@ -1,8 +1,12 @@
 #tab-con{
+    display:flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(39, 117, 148);
 }
 #table,th,td{
     color:white;
     border:2px solid white;
     border-collapse: collapse;
+    text-align: center;
 }

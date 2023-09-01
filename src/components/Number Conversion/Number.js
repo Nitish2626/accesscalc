@@ -28,6 +28,8 @@ const Number = (props) => {
     const [ivalue, setIvalue] = useState();
     const [ivalue2, setIvalue2] = useState();
 
+    const [list,setList]=useState();
+
     const changeIvalue = (events) => {
         setIvalue(events.target.value);
     }
