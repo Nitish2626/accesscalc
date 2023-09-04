@@ -1,0 +1,13 @@
+#info-con{
+    /* display:flex;
+    align-items: center;
+    justify-content: center; */
+    background-color: rgb(39, 117, 148);
+    padding:0 2vw;
+}
+#h2{
+    color:black;
+}
+p{
+    color:white;
+}

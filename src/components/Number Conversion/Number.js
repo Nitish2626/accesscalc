@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Number.css";
 import Error from "../Error/Error";
-import Table from "../Table Converion/Table";
+import Info from "../Info Converion/Info";
 
 const Number = (props) => {
 
@@ -27,8 +27,6 @@ const Number = (props) => {
 
     const [ivalue, setIvalue] = useState();
     const [ivalue2, setIvalue2] = useState();
-
-    const [list,setList]=useState();
 
     const changeIvalue = (events) => {
         setIvalue(events.target.value);
@@ -115,16 +113,20 @@ const Number = (props) => {
         }
         else if(svalue=="Binary" && s2value=="Decimal"){
             setIvalue2(bin_to_bdoh(2).replaceAll(",",""));
+            setinfoHide(true);
         }
         else if(svalue=="Binary" && s2value=="Octal"){
             setIvalue2(dec_to_bdoh(bin_to_bdoh(2),8).replaceAll(",",""));
+            setinfoHide(true);
         }
         else if(svalue=="Binary" && s2value=="Hexadecimal"){
             setIvalue2(dec_to_bdoh(bin_to_bdoh(2),16).replaceAll(",",""));
+            setinfoHide(true);
         }
 
         else if(svalue=="Decimal" && s2value=="Binary"){
             setIvalue2(dec_to_bdoh(ivalue,2).replaceAll(",",""));
+            setinfoHide(true);
         }
         else if(svalue=="Decimal" && s2value=="Decimal"){
             setErr(true);
@@ -132,16 +134,20 @@ const Number = (props) => {
         }
         else if(svalue=="Decimal" && s2value=="Octal"){
             setIvalue2(dec_to_bdoh(ivalue,8).replaceAll(",",""));
+            setinfoHide(true);
         }
         else if(svalue=="Decimal" && s2value=="Hexadecimal"){
             setIvalue2(dec_to_bdoh(ivalue,16).replaceAll(",",""));
+            setinfoHide(true);
         }
 
         else if(svalue=="Octal" && s2value=="Binary"){
             setIvalue2(dec_to_bdoh(bin_to_bdoh(8),2).replaceAll(",",""));
+            setinfoHide(true);
         }
         else if(svalue=="Octal" && s2value=="Decimal"){
             setIvalue2(bin_to_bdoh(8).replaceAll(",",""));
+            setinfoHide(true);
         }
         else if(svalue=="Octal" && s2value=="Octal"){
             setErr(true);
@@ -149,22 +155,29 @@ const Number = (props) => {
         }
         else if(svalue=="Octal" && s2value=="Hexadecimal"){
             setIvalue2(dec_to_bdoh(bin_to_bdoh(8),16).replaceAll(",",""));
+            setinfoHide(true);
         }
 
         else if(svalue=="Hexadecimal" && s2value=="Binary"){
             setIvalue2(dec_to_bdoh(bin_to_bdoh(16),2).replaceAll(",",""));
+            setinfoHide(true);
         }
         else if(svalue=="Hexadecimal" && s2value=="Decimal"){
             setIvalue2(bin_to_bdoh(16).replaceAll(",",""));
+            setinfoHide(true);
         }
         else if(svalue=="Hexadecimal" && s2value=="Octal"){
             setIvalue2(dec_to_bdoh(bin_to_bdoh(16),8).replaceAll(",",""));
+            setinfoHide(true);
         }
         else if(svalue=="Hexadecimal" && s2value=="Hexadecimal"){
             setErr(true);
             setIvalue2(" ");
         }
     }
+
+    const [infoHide,setinfoHide]=useState(false);
+
 
     return (
         <div id="num">
@@ -198,7 +211,9 @@ const Number = (props) => {
 
                 <button id="con-btn" onClick={convert}>Convert</button>
             </div>
-            <Table />
+
+            {infoHide && <Info val={ivalue} val2={ivalue2} sel={svalue} sel2={s2value} />}
+
             {error && <Error value={close} />}
         </div>
     );
