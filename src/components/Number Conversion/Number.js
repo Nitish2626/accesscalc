@@ -43,7 +43,7 @@ const Number = (props) => {
         let rem = [];
         let r;
 
-        while (quo > 1) {
+        while (quo >1) {
             r = quo % n;
             if (r == 10) {
                 r = "A";
@@ -65,6 +65,7 @@ const Number = (props) => {
             }
             quo = Math.floor(quo / n);
             rem.push(r);
+            console.log(quo,rem);
         }
         let y = rem.reverse();
         if (quo == 1) {

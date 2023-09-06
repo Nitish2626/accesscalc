@@ -34,8 +34,10 @@ const Info=(props)=>{
         <div id="info-con">
             <h2 id="h2">Explanation :</h2>
             <p>
-                ( {props.val} )<sub>{m}</sub> and 
+                ( {props.val} )<sub>{m}</sub> =
                 ( {props.val2} )<sub>{n}</sub>
+                <br></br>
+                
             </p>
         </div>
     );
