@@ -1,13 +1,15 @@
 #info-con{
-    /* display:flex;
-    align-items: center;
-    justify-content: center; */
-    background-color: rgb(39, 117, 148);
+    background-color: rgb(71, 70, 70);
     padding:0 2vw;
+    margin-bottom: 5vh;
 }
-#h2{
+.h2{
     color:black;
 }
 p{
     color:white;
+}
+img{
+    width:95vw;
+    height:15vh;
 }

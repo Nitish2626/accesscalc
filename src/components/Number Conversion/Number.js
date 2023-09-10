@@ -37,7 +37,7 @@ const Number = (props) => {
     const [sval, setSval] = useState();
     const [sval2, setSval2] = useState();
 
-    // const [quorem,setQuorem]=useState([]);
+    const [quorem,setQuorem]=useState([]);
 
     let quo,rem=[],r;
     const dec_to_bdoh = (value, n) => {
@@ -65,10 +65,6 @@ const Number = (props) => {
             }
             quo = Math.floor(quo / n);
             rem.push(r);
-            // setQuorem((prevState)=>{
-            //     return [...prevState,{q:quo,rem:r,id:Math.random().toString()}];
-            // })
-    
         }
         let y = rem.reverse();
         if (quo == 1) {
