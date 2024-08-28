@@ -1,4 +1,4 @@
-# <img src="./src/Images/Eduinfo.png" width="40" height="40"></img> useCalc 
+# <img src="./src/Images/Eduinfo.png" width="40" height="40"></img> AccessCalc
 ## [Visit Site](https://usecalc.000webhostapp.com/)
 
 ## Technologies used
