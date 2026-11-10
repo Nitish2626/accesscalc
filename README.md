@@ -1,4 +1,4 @@
-# UseCalc
+# Access Calc
 
 <div align="center">
   <img src="public/Eduinfo.png" alt="Access Calc" width="100" />
