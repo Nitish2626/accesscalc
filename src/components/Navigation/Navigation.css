@@ -1,0 +1,591 @@
+#nav-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    padding: 0% 5%;
+    z-index: 10;
+}
+
+#logo-image {
+    width: 27%;
+    height: 10%;
+}
+
+#hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 15%;
+    background-color: transparent;
+    padding: 2% 0%;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.lines {
+    width: 70%;
+    background-color: white;
+    padding: 3% 0%;
+    margin: 6% 0%;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+/* #line1{
+    rotate:50deg;
+    margin-top:30%;
+}
+#line2{
+    opacity:0;
+}
+#line3{
+    rotate:-50deg;
+    margin-top:-30%;
+} */
+
+#navigation-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    width: 60%;
+    border-radius: 10px;
+    background-color: black;
+    padding: 5% 5%;
+    margin-top: 80%;
+    margin-left: 35%;
+    border: 2px solid rgb(137, 134, 134);
+    z-index: 10;
+}
+
+#navigation-links::before {
+    content: '';
+    width: 2%;
+    padding: 4% 3%;
+    border: 2px solid rgb(137, 134, 134);
+    border-right: none;
+    border-bottom: none;
+    rotate: 45deg;
+    margin-top: -15%;
+    margin-left: 82%;
+    background-color: black;
+}
+
+.links,
+.container-links {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    margin-right: 5%;
+    padding: 5% 0%;
+    cursor: pointer;
+}
+
+.active{
+    border-bottom: 2px solid white;
+}
+
+#calculator {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#arrow-image {
+    width: 25%;
+    height: 25%;
+    rotate: 0deg;
+    transition: 0.3s;
+}
+
+#container {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    width: 60%;
+    margin: 60% 0% 0% 40%;
+    border: 2px solid rgb(137, 134, 134);
+    background-color: black;
+    border-radius: 10px;
+    padding: 1% 2%;
+    transition: 0.2s;
+    z-index: 10;
+}
+
+.container-links {
+    color: skyblue;
+}
+
+@media only screen and (min-width:321px) {
+
+    #logo-image {
+        width: 25%;
+        height: 10%;
+    }
+
+    .lines {
+        width: 65%;
+    }
+
+    #navigation-links {
+        width: 60%;
+        margin-top: 76%;
+        margin-left: 35%;
+    }
+
+    #navigation-links::before {
+        margin-top: -16%;
+    }
+
+    #container {
+        width: 60%;
+        margin: 59% 0% 0% 40%;
+    }
+}
+
+@media only screen and (min-width:340px) {
+
+    #logo-image {
+        width: 20%;
+        height: 10%;
+    }
+
+    .lines {
+        width: 60%;
+        padding: 2.8% 0%;
+    }
+
+    #navigation-links {
+        width: 58%;
+        margin-top: 72%;
+        margin-left: 37%;
+    }
+
+    #navigation-links::before {
+        margin-top: -16%;
+    }
+
+    #container {
+        width: 58%;
+        margin: 57% 0% 0% 42%;
+    }
+}
+
+@media only screen and (min-width:360px) {
+
+    #navigation-links {
+        width: 54%;
+        margin-top: 68%;
+        margin-left: 40%;
+    }
+
+    #navigation-links::before {
+        margin-top: -17%;
+    }
+
+    #container {
+        width: 54%;
+        margin: 54% 0% 0% 45%;
+    }
+}
+
+@media only screen and (min-width:380px) {
+
+    #navigation-links {
+        width: 54%;
+        margin-top: 67%;
+        margin-left: 40%;
+    }
+
+    #navigation-links::before {
+        margin-top: -16.5%;
+    }
+
+    #container {
+        width: 54%;
+        margin: 52.5% 0% 0% 45%;
+    }
+}
+
+@media only screen and (min-width:400px) {
+
+    #navigation-links {
+        width: 50%;
+        margin-top: 64%;
+        margin-left: 44%;
+    }
+
+    #navigation-links::before {
+        margin-top: -18%;
+    }
+
+    #container {
+        width: 50%;
+        margin: 49% 0% 0% 49%;
+    }
+}
+
+@media only screen and (min-width:420px) {
+
+    #navigation-links {
+        width: 48%;
+        margin-top: 62%;
+        margin-left: 45.5%;
+    }
+
+    #navigation-links::before {
+        margin-top: -19%;
+    }
+
+    #container {
+        width: 48%;
+        margin: 47% 0% 0% 50%;
+    }
+}
+
+@media only screen and (min-width:440px) {
+
+    #navigation-links {
+        width: 46%;
+        margin-top: 60%;
+        margin-left: 47%;
+    }
+
+    #navigation-links::before {
+        margin-top: -19.5%;
+    }
+
+    #container {
+        width: 46%;
+        margin: 45% 0% 0% 52%;
+    }
+}
+
+@media only screen and (min-width:460px) {
+
+    #navigation-links {
+        width: 44%;
+        margin-top: 58%;
+        margin-left: 49%;
+    }
+
+    #navigation-links::before {
+        margin-top: -20%;
+    }
+
+    #container {
+        width: 44%;
+        margin: 43% 0% 0% 54%;
+    }
+}
+
+@media only screen and (min-width:480px) {
+
+    #logo-image {
+        width: 17%;
+        height: 10%;
+    }
+
+    #navigation-links {
+        width: 42%;
+        margin-top: 54%;
+        margin-left: 51%;
+    }
+
+    #navigation-links::before {
+        margin-top: -21%;
+    }
+
+    #container {
+        width: 42%;
+        margin: 41.5% 0% 0% 56%;
+    }
+}
+
+@media only screen and (min-width:500px) {
+
+    .lines {
+        width: 55%;
+    }
+
+    #navigation-links {
+        width: 40%;
+        margin-top: 52%;
+        margin-left: 52.5%;
+    }
+
+    #navigation-links::before {
+        margin-top: -22%;
+    }
+
+    #container {
+        width: 40%;
+        margin: 40% 0% 0% 57.5%;
+    }
+}
+
+@media only screen and (min-width:520px) {
+
+    .lines {
+        width: 55%;
+    }
+
+    #navigation-links {
+        width: 40%;
+        margin-top: 51%;
+        margin-left: 52.5%;
+    }
+
+    #navigation-links::before {
+        margin-top: -22%;
+    }
+
+    #container {
+        width: 40%;
+        margin: 39% 0% 0% 57.5%;
+    }
+}
+
+@media only screen and (min-width:550px) {
+
+    .lines {
+        width: 50%;
+    }
+
+    #navigation-links {
+        width: 37%;
+        margin-top: 49%;
+        margin-left: 55%;
+    }
+
+    #navigation-links::before {
+        margin-top: -24%;
+    }
+
+    #container {
+        width: 37%;
+        margin: 36.5% 0% 0% 60%;
+    }
+}
+
+@media only screen and (min-width:580px) {
+
+    #logo-image {
+        width: 15%;
+        height: 10%;
+    }
+
+    .lines {
+        width: 50%;
+    }
+
+    #navigation-links {
+        width: 37%;
+        margin-top: 46%;
+        margin-left: 55%;
+    }
+
+    #navigation-links::before {
+        margin-top: -24%;
+    }
+
+    #container {
+        width: 37%;
+        margin: 35.5% 0% 0% 60%;
+    }
+}
+
+@media only screen and (min-width:620px) {
+
+    #logo-image {
+        width: 15%;
+        height: 10%;
+    }
+
+    .lines {
+        width: 45%;
+    }
+
+    #navigation-links {
+        width: 33%;
+        margin-top: 44%;
+        margin-left: 58.5%;
+    }
+
+    #navigation-links::before {
+        margin-top: -27%;
+    }
+
+    #container {
+        width: 33%;
+        margin: 33% 0% 0% 64%;
+    }
+}
+
+@media only screen and (min-width:640px) {
+
+    .lines {
+        width: 45%;
+    }
+
+    #navigation-links {
+        width: 33%;
+        margin-top: 42%;
+        margin-left: 58.5%;
+    }
+
+    #navigation-links::before {
+        margin-top: -27%;
+    }
+
+    #container {
+        width: 33%;
+        margin: 32% 0% 0% 64%;
+    }
+}
+
+@media only screen and (min-width:665px) {
+
+    #logo-image {
+        width: 10%;
+        height: 5%;
+    }
+
+    #hamburger-icon {
+        display: none;
+    }
+
+    #navigation-links {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+        margin: 0% 0% 0% 15%;
+        padding: 0%;
+    }
+
+    #navigation-links::before {
+        display: none;
+    }
+
+    #arrow-image {
+        width: 40%;
+        height: 25%;
+    }
+
+    .links,
+    .container-links {
+        width: 15%;
+        font-size: 17px;
+        text-align: center;
+        padding: 1% 0%;
+    }
+
+    .links:hover,
+    #calculator:hover {
+        border-bottom: 2px solid white;
+    }
+
+    #container {
+        width: 26%;
+        margin: 0.5% 0% 0% 65%;
+        padding: 1% 1%;
+    }
+
+    #container::before {
+        content: '';
+        width: 2%;
+        padding: 4% 3%;
+        border: 2px solid rgb(137, 134, 134);
+        border-right: none;
+        border-bottom: none;
+        rotate: 45deg;
+        margin-top: -9.5%;
+        margin-left: 40%;
+        background-color: black;
+    }
+
+    .container-links {
+        margin: 3% 0%;
+    }
+
+}
+
+@media only screen and (min-width:769px) {
+
+    #container {
+        width: 23%;
+        margin: 0% 0% 0% 65%;
+    }
+
+    #container::before {
+        margin-top: -10%;
+    }
+}
+
+@media only screen and (min-width:1025px) {
+
+    #logo-image {
+        width: 8%;
+        height: 5%;
+    }
+
+    #container {
+        width: 18%;
+        margin: 0% 0% 0% 66%;
+    }
+
+    #container::before {
+        margin-top: -11.5%;
+    }
+
+    #arrow-image {
+        width: 30%;
+        height: 25%;
+    }
+}
+
+@media only screen and (min-width:1200px) {
+
+    #logo-image {
+        width: 7%;
+    }
+
+    #container {
+        width: 15%;
+        margin: 0% 0% 0% 67%;
+    }
+
+    #container::before {
+        margin-top: -13%;
+    }
+}
+
+
+
+@media only screen and (min-width:1400px) {
+
+    #logo-image {
+        width: 6%;
+    }
+
+    #container {
+        width: 13%;
+        margin: 0% 0% 0% 68%;
+    }
+
+    #container::before {
+        margin-top: -14.5%;
+    }
+}

@@ -1,0 +1,215 @@
+#std-div{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#standard-label{
+    color:white;
+    text-align: center;
+    font-size: 20px;
+    margin:10% 0% 0% 0%;
+}
+#standard{
+    display:grid;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto ;
+    grid-row-gap:5%;
+    grid-column-gap: 5%;
+    width:80%;
+    border:2px solid black;
+    border-radius: 10px;
+    background-color: rgb(47, 47, 47);
+    padding:3% 3% 30% 3%;
+    margin:10% 10% 15% 10%;
+    box-shadow: 2px 2px 5px 0px black;
+}
+#standard-in{
+    width:100%;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    text-align: right;
+    color:white;
+    background-color: black;
+    border-radius: 10px;
+    padding:10% 1%;
+    border:none;
+    font-size: 20px;
+}
+#plus:hover,#minus:hover,#multiply:hover,#divide:hover,#one:hover,#two:hover,#three:hover,#four:hover,#five:hover,#six:hover,#seven:hover,#eight:hover,#nine:hover,#full-stop:hover,#zero:hover,#comma:hover{
+    background-color: rgb(63, 62, 62);
+}
+#delete:hover{
+    background-color: rgb(169, 19, 19);
+}
+#clear:hover{
+    background-color: rgb(21, 97, 127);
+}
+#equal:hover{
+    background-color: rgb(7, 83, 7);
+}
+#plus,#minus,#multiply,#divide,#one,#two,#three,#delete,#four,#five,#six,#clear,#seven,#eight,#nine,#equal,#full-stop,#zero,#comma{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    color:white;
+    background-color: black;
+    border-radius: 10px;
+    padding:15% 0%;
+    border:none;
+    font-size: 20px;
+    cursor:pointer;
+}
+#one,#two,#three,#delete{
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+#four,#five,#six,#clear{
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+#seven,#eight,#nine,#equal{
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+#full-stop,#zero,#comma{
+    grid-row-start: 7;
+    grid-row-end: 8;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+#minus,#two,#five,#eight,#zero{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+#multiply,#three,#six,#nine,#comma{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+#divide,#delete,#clear,#equal{
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+#delete{
+    background-color: red;
+}
+#clear{
+    background-color: skyblue;
+}
+#equal{
+    grid-row-end: 8;
+    background-color: rgb(11, 183, 11);
+}
+
+@media only screen and (min-width:340px){
+
+    #standard-label{
+        font-size:20px;
+        margin:7% 0% 0% 0%;
+    }
+
+    #standard{
+        width:70%;
+        padding:3% 3% 25% 3%;
+    }
+}
+
+@media only screen and (min-width:380px){
+    
+    #standard{
+        padding:3% 3% 22% 3%;
+        margin:8% 10% 15% 10%;
+    }
+}
+
+@media only screen and (min-width:440px){
+
+    #standard-label{
+        margin:5% 0% 0% 0%;
+    }
+    
+    #standard{
+        width:60%;
+        padding:3% 3% 20% 3%;
+        margin:6% 10% 15% 10%;
+    }
+}
+
+@media only screen and (min-width:500px){  
+    
+    #standard{
+        width:50%;
+        padding:3% 2% 17% 2%;
+        margin:5% 10% 15% 10%;
+    }
+}
+
+@media only screen and (min-width:550px){
+
+    #standard-label{
+        margin:3% 0% 0% 0%;
+    }
+    
+    #standard{
+        width:45%;
+        padding:2% 2% 15% 2%;
+        margin:5% 10% 15% 10%;
+    }
+}
+
+@media only screen and (min-width:665px){
+    
+    #standard{
+        width:40%;
+        padding:2% 1.5% 13% 1.5%;
+        margin:4% 10% 5% 10%;
+    }
+}
+
+@media only screen and (min-width:769px){
+    
+    #standard{
+        width:35%;
+        padding:1.5% 1.5% 11% 1.5%;
+    }
+}
+
+@media only screen and (min-width:1025px){
+
+    #standard-label{
+        margin:2% 0% 0% 0%;
+    }
+
+    #standard{
+        width:30%;
+        padding:1% 1% 9% 1%;
+        margin:3% 10% 5% 10%;
+    }
+}
+
+@media only screen and (min-width:1200px){
+
+    #standard{
+        width:25%;
+        padding:1% 0.8%  8% 0.8%;
+        margin:2% 10% 5% 10%;
+    }
+}
+
+@media only screen and (min-width:1400px){
+    
+    #standard{
+        width:20%;
+        padding:1% 0.8%  6% 0.8%;
+    }
+}

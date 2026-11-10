@@ -1,0 +1,8 @@
+*{
+    box-sizing: border-box;
+    padding:0px;
+    margin: 0px;
+}
+body{
+    background-color:rgb(47, 47, 47);
+}
